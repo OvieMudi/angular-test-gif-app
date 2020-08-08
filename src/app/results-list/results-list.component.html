@@ -1,4 +1,14 @@
-<div>
-    <!-- Implement result list here -->
-    Results List
+<div class="results">
+  <!-- Implement result list here -->
+  <a
+    class="gif item"
+    [routerLink]="['/gifs', gif.id]"
+    *ngFor="let gif of gifs | async"
+  >
+    <img
+      class="gif"
+      [src]="gif.images.downsized_large.url"
+      [alt]="searchTerm | async"
+    />
+  </a>
 </div>

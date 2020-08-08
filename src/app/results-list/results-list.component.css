@@ -1,0 +1,35 @@
+.results {
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
+  margin-top: 20px;
+  height: 1000px;
+  width: 1000px;
+}
+
+.item {
+  width: 32%;
+  margin-bottom: 3px;
+}
+
+.item:nth-child(3n + 1) {
+  order: 1;
+}
+.item:nth-child(3n + 2) {
+  order: 2;
+}
+.item:nth-child(3n) {
+  order: 3;
+}
+
+.gif {
+  width: 248px;
+}
+
+.container::before,
+.container::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+}
